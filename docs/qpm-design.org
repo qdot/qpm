@@ -1,0 +1,56 @@
+* Basic Architecture
+Core app is just a python script that checks a plugin directory for
+utility commands to add on.
+* Core Functionality
+** Project/Directory Creator
+Creates a new project directory with the following structure:
+- code 
+  - Code repos associated with the project. Should usually stay
+    pristine, since this is for backups, not development.
+- images 
+  - Images associated with the project. Different from designs
+    in that these are either finished images or taken from elsewhere.
+    May be contextual. For instance, blogging projects, this can be per
+    post images, which may be pulled from elsewhere.
+- designs 
+  - Photoshop/illustrator/etc files
+- web 
+  - Web resources related to project. May also be static websites
+    that predate keeping sites in repos.
+- videos 
+  - Video resources related to project. Can include FC/Premier
+    Project Files.
+- audio 
+  - Audio resources related to project. Can include samples,
+    REAPER/Ableton files, etc.
+- portfolio 
+  - Data having specifically to do with portfolio
+    document/website creation. Descriptions, quotes, press, etc.
+- docs
+  - Documents written about the project, that may possibly not be
+    in code repos.
+- papers 
+  - Research papers, ebooks, etc.
+- models 
+  - Any CAD models, meshes, etc.
+- pcb 
+  - PCB layouts, gerber files, etc.
+** Information File
+JSON file that sits in the project root. Always named project.json.
+
+Contains:
+- Project Name
+- Project Start Date
+- Project Code Repo URL?
+- Project Type
+- 
+** Project/Directory Linter
+Makes sure each main project directory has an info file, and no files
+hanging around in the root directory or in something that is not the
+structure laid out above.
+* Plugins
+** Portfolio Builder
+** Repo Updater
+** Blog Builder/Syncer?
+** Emacs Utility
+For generating autocompletes, etc?
